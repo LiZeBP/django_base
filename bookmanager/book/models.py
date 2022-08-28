@@ -20,7 +20,7 @@ class BookInfo(models.Model):
         return self.name
 
 
-class Person(models.Model):
+class PersonInfo(models.Model):
     name = models.CharField(max_length=255, default='', verbose_name='姓名')
     gender = models.BooleanField()
     book = models.ForeignKey(BookInfo, on_delete=models.CASCADE)
